@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
 
-import { MainLayout } from "@/components/layouts/MainLayout";
-import { DarkLayout } from "@/components/layouts/DarkLayout";
+import { MainLayout } from "../components/layouts/MainLayout";
+import { DarkLayout } from "../components/layouts/DarkLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,7 @@ export default function AboutPage() {
   );
 }
 
-AboutPage.getLayout = function getLayout(page) {
+AboutPage.getLayout = function getLayout(page: JSX.Element) {
   return (
     <MainLayout>
       <DarkLayout>{page}</DarkLayout>
